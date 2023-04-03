@@ -4,7 +4,7 @@ resource "aws_instance" "webservers" {
   count = var.webserver_count_per_subnet * length(aws_subnet.public_subnets)
   subnet_id =  aws_subnet.public_subnets[count.index % length(aws_subnet.public_subnets)].id
   tags = {
-    Name = "Web",
+    Name = "Web Servers",
     Env = "Lab",
     Owner = "Peet Gouws"
   }
