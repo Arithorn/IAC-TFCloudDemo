@@ -18,6 +18,6 @@ resource "aws_instance" "applitcation_servers" {
   tags = {
     Name = "Application",
     Env = "Lab",
-    Owner = "Peet Gouws"
+    Owner = "Chiraag"
   }
 }
